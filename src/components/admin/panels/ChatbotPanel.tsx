@@ -1,4 +1,4 @@
-import { useMemo, useState, type FormEvent } from 'react';
+﻿import { useMemo, useState, type FormEvent } from 'react';
 import {
   ChevronDown, ChevronUp, Eye, EyeOff, Pencil, Plus, Trash2,
 } from 'lucide-react';
@@ -24,27 +24,27 @@ const CATEGORIES = [
 ];
 
 const TONE_OPTIONS = [
-  { value: 'professional', label: 'Professional — recruiter-safe, plain' },
-  { value: 'warm', label: 'Warm — confident and glad you asked (default)' },
-  { value: 'playful', label: 'Playful — cheeky, a bit dry, still warm' },
+  { value: 'professional', label: 'Professional â€” recruiter-safe, plain' },
+  { value: 'warm', label: 'Warm â€” confident and glad you asked (default)' },
+  { value: 'playful', label: 'Playful â€” cheeky, a bit dry, still warm' },
 ];
 
 const LANGUAGE_OPTIONS = [
   { value: 'english', label: 'English' },
-  { value: 'hinglish', label: 'Hinglish — Roman-script Hindi/English' },
+  { value: 'hinglish', label: 'Hinglish â€” Roman-script Hindi/English' },
 ];
 
 /** Preview lines so the admin can hear the difference before saving. */
 const TONE_PREVIEW: Record<string, string> = {
-  professional: '"Here is what I can tell you. Mayank Pawar is a writer and software developer…"',
-  warm: '"Good question — here is the honest version. Mayank Pawar is a writer and software developer…"',
-  playful: '"Alright, let us get into it. Mayank Pawar is a writer and software developer…"',
+  professional: '"Here is what I can tell you. Priyanka Pawar is a writer and software developerâ€¦"',
+  warm: '"Good question â€” here is the honest version. Priyanka Pawar is a writer and software developerâ€¦"',
+  playful: '"Alright, let us get into it. Priyanka Pawar is a writer and software developerâ€¦"',
 };
 
 const FALLBACK_OPTIONS = [
-  { value: 'helpful', label: 'Helpful — full explanations' },
-  { value: 'witty', label: 'Witty — dry asides' },
-  { value: 'minimal', label: 'Minimal — one line' },
+  { value: 'helpful', label: 'Helpful â€” full explanations' },
+  { value: 'witty', label: 'Witty â€” dry asides' },
+  { value: 'minimal', label: 'Minimal â€” one line' },
 ];
 
 const SECTION_OPTIONS = [
@@ -89,7 +89,7 @@ export default function ChatbotPanel() {
   const save = (form: Omit<ChatbotFAQ, 'id'>) => {
     if (editing?.managed) {
       updateChatbotFAQ(editing.id, form);
-      notify('Answer updated — syncing to the cloud');
+      notify('Answer updated â€” syncing to the cloud');
     } else if (editing) {
       // Overriding a built-in writes a managed override into the record; the
       // embedded answer is never mutated, so it always comes back.
@@ -356,7 +356,7 @@ export default function ChatbotPanel() {
                   key={faq.id}
                   dimmed={faq.enabled === false}
                   title={faq.question}
-                  meta={faq.category ? `${faq.category}${faq.section ? ` · jumps to ${faq.section}` : ''}` : undefined}
+                  meta={faq.category ? `${faq.category}${faq.section ? ` Â· jumps to ${faq.section}` : ''}` : undefined}
                   body={<p className="line-clamp-2">{faq.answer}</p>}
                   chips={(
                     <>
@@ -396,7 +396,7 @@ export default function ChatbotPanel() {
                               category: faq.category ?? 'general',
                               enabled: false,
                             });
-                            notify('Default dismissed on this site — the built-in stays in the app');
+                            notify('Default dismissed on this site â€” the built-in stays in the app');
                           }}
                         >
                           <EyeOff size={15} aria-hidden="true" />

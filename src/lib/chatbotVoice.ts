@@ -1,10 +1,10 @@
-/**
+﻿/**
  * The chatbot's voice.
  *
  * Three dials, deliberately separated so an admin can mix them:
  *
- *  language  `english` | `hinglish`  — which register the answer is written in
- *  tone      `professional` | `warm` | `playful` — how it is delivered
+ *  language  `english` | `hinglish`  â€” which register the answer is written in
+ *  tone      `professional` | `warm` | `playful` â€” how it is delivered
  *  flavour   a short opener and closer wrapped around the substantive answer
  *
  * WHY A FLAVOUR LAYER RATHER THAN THREE COPIES OF EVERY ANSWER
@@ -29,13 +29,13 @@ import type { ChatbotLanguage, ChatbotTone } from './types';
 const OPENERS: Record<ChatbotTone, string[]> = {
   professional: ['Here is what I can tell you.', 'Short answer:'],
   warm: [
-    "Good question — here's the honest version.",
+    "Good question â€” here's the honest version.",
     "Happy to fill that in.",
     "Okay, this is a good one.",
   ],
   playful: [
     "Alright, let's get into it.",
-    "Good ask. Here's the thing —",
+    "Good ask. Here's the thing â€”",
     "Let me put it straight:",
   ],
 };
@@ -44,7 +44,7 @@ const CLOSERS: Record<ChatbotTone, string[]> = {
   professional: ['', '', ''],
   warm: [
     "Anything else you want to dig into?",
-    'Ask me the next one — I am not going anywhere.',
+    'Ask me the next one â€” I am not going anywhere.',
     'Happy to go deeper on any of that.',
   ],
   playful: [
@@ -57,19 +57,19 @@ const CLOSERS: Record<ChatbotTone, string[]> = {
 const FALLBACKS: Record<ChatbotLanguage, Record<ChatbotTone, string[]>> = {
   english: {
     professional: [
-      "I don't have an answer for that one yet. Try asking who Mayank is, what he builds, or how to get in touch.",
+      "I don't have an answer for that one yet. Try asking who Priyanka is, what he builds, or how to get in touch.",
       'That is outside what I know. I am best with questions about the portfolio, the writing, skills and contact details.',
       "Not something I can help with. Ask about the work, the writing, or where to find contact details.",
     ],
     warm: [
       "Honestly? That one is outside what I know. Stick to portfolio, writing, skills or contact and I have you covered.",
-      "I could guess, but I would rather not. Ask me something I can actually help with — the work, the writing, or how to reach him.",
-      "Not my strong suit. The good stuff is all about the portfolio, the writing and contact — try one of those.",
+      "I could guess, but I would rather not. Ask me something I can actually help with â€” the work, the writing, or how to reach him.",
+      "Not my strong suit. The good stuff is all about the portfolio, the writing and contact â€” try one of those.",
     ],
     playful: [
       "Nice try, but that is genuinely not something I know. I do know the portfolio, the writing and how to get hold of him.",
-      "I am going to politely pretend I understood that. Ask about the work, the writing or contact — I am useful there.",
-      "That is a hard no from me. Portfolio, writing, skills, contact — pick one and I will go.",
+      "I am going to politely pretend I understood that. Ask about the work, the writing or contact â€” I am useful there.",
+      "That is a hard no from me. Portfolio, writing, skills, contact â€” pick one and I will go.",
     ],
   },
   hinglish: {
@@ -79,28 +79,28 @@ const FALLBACKS: Record<ChatbotLanguage, Record<ChatbotTone, string[]>> = {
       "Is topic par mujhe kuch nahi pata. Portfolio ya contact se shuru karo.",
     ],
     warm: [
-      "Honestly, is baat ka mujhe pata nahi. Portfolio, writing, skills ya contact — ye sab main achhe se bata sakta hoon.",
+      "Honestly, is baat ka mujhe pata nahi. Portfolio, writing, skills ya contact â€” ye sab main achhe se bata sakta hoon.",
       "Guess kar sakta hoon, par guess karna sahi nahi hai. Kuch bhi poochho jo main jaanta hoon.",
-      "Is par main kuch nahi jaanta. Kaam, likhna, contact — ye mere strong areas hain.",
+      "Is par main kuch nahi jaanta. Kaam, likhna, contact â€” ye mere strong areas hain.",
     ],
     playful: [
-      "Ye toh maine bilkul nahi suna hai. Portfolio, writing, contact — yahan main kamaal kaam karta hoon.",
-      "Dhyan se dekha — maine ise ignore kar diya. Kaam ya writing pe poochho, jaldi jawab milega.",
-      "Nahi yaar, is baar main haan nahi bol sakta. Portfolio, writing, contact — kuch toh poochho.",
+      "Ye toh maine bilkul nahi suna hai. Portfolio, writing, contact â€” yahan main kamaal kaam karta hoon.",
+      "Dhyan se dekha â€” maine ise ignore kar diya. Kaam ya writing pe poochho, jaldi jawab milega.",
+      "Nahi yaar, is baar main haan nahi bol sakta. Portfolio, writing, contact â€” kuch toh poochho.",
     ],
   },
 };
 
 const WELCOME: Record<ChatbotLanguage, Record<ChatbotTone, string>> = {
   english: {
-    professional: "Hi — I'm the assistant for this site. Ask me about Mayank's work, writing, skills, or how to get in touch.",
-    warm: "Hey — good to see you. Ask me anything about Mayank's work, writing, skills, or how to get in touch. I actually enjoy this part.",
+    professional: "Hi â€” I'm the assistant for this site. Ask me about Priyanka's work, writing, skills, or how to get in touch.",
+    warm: "Hey â€” good to see you. Ask me anything about Priyanka's work, writing, skills, or how to get in touch. I actually enjoy this part.",
     playful: "Well, well. You found the assistant. Ask me about the work, the writing, or how to reach him. Try to stump me.",
   },
   hinglish: {
-    professional: "Hi — main is site ka assistant hoon. Mayank ka kaam, writing, skills ya contact — kuch bhi poochho.",
-    warm: "Arre, aa gaye tum. Mayank ka kaam, writing, skills, contact — jo bhi poochna ho, pooch lo. Mujhe ye pasand hai.",
-    playful: "Acha gaya, assistant dhundh liya tum. Kaam, writing, ya contact — pucho. Par mushkil sawaal rakhna.",
+    professional: "Hi â€” main is site ka assistant hoon. Priyanka ka kaam, writing, skills ya contact â€” kuch bhi poochho.",
+    warm: "Arre, aa gaye tum. Priyanka ka kaam, writing, skills, contact â€” jo bhi poochna ho, pooch lo. Mujhe ye pasand hai.",
+    playful: "Acha gaya, assistant dhundh liya tum. Kaam, writing, ya contact â€” pucho. Par mushkil sawaal rakhna.",
   },
 };
 
@@ -156,16 +156,16 @@ export function multiTurnFor(
 ): string {
   const byTone: Record<ChatbotTone, Record<ChatbotLanguage, string>> = {
     professional: {
-      english: "That is a few questions deep — I have probably run out of things I know. For anything specific, the Contact section reaches Mayank directly.",
-      hinglish: "Thoda deep ho gaya ye. Jo specific chahiye, uske liye Contact section se seedha Mayank tak pahunch sakte ho.",
+      english: "That is a few questions deep â€” I have probably run out of things I know. For anything specific, the Contact section reaches Priyanka directly.",
+      hinglish: "Thoda deep ho gaya ye. Jo specific chahiye, uske liye Contact section se seedha Priyanka tak pahunch sakte ho.",
     },
     warm: {
-      english: "We have gone a fair way in. I am starting to run out of things worth saying — for anything specific, the Contact section goes straight to Mayank.",
-      hinglish: "Bahut ho gaya humara discussion. Ab main kya bolun, wo bhi soch raha hoon. Specific kuch chahiye toh Contact section se Mayank tak direct.",
+      english: "We have gone a fair way in. I am starting to run out of things worth saying â€” for anything specific, the Contact section goes straight to Priyanka.",
+      hinglish: "Bahut ho gaya humara discussion. Ab main kya bolun, wo bhi soch raha hoon. Specific kuch chahiye toh Contact section se Priyanka tak direct.",
     },
     playful: {
       english: "Okay, I have to admit I am out of material. For anything real, the Contact section puts you straight through to him.",
-      hinglish: "Sach kahun, ab mere paas kuch bach nahi bacha. Asli sawaal ke liye Contact section se Mayank tak seedha.",
+      hinglish: "Sach kahun, ab mere paas kuch bach nahi bacha. Asli sawaal ke liye Contact section se Priyanka tak seedha.",
     },
   };
   return byTone[tone]?.[language] ?? byTone.professional.english;
@@ -182,8 +182,8 @@ export function toggleLabels(language: ChatbotLanguage) {
         playful: 'Playful',
         ariaLanguage: 'Reply language',
         ariaTone: 'Reply tone',
-        thinking: 'Soch raha hoon…',
-        placeholder: 'Kuch bhi poochho…',
+        thinking: 'Soch raha hoonâ€¦',
+        placeholder: 'Kuch bhi poochhoâ€¦',
         official: 'Official',
         newTop: 'Naya top score.',
         placed: 'is board par.',
@@ -196,8 +196,8 @@ export function toggleLabels(language: ChatbotLanguage) {
         playful: 'Playful',
         ariaLanguage: 'Reply language',
         ariaTone: 'Reply tone',
-        thinking: 'Looking that up…',
-        placeholder: 'Ask anything…',
+        thinking: 'Looking that upâ€¦',
+        placeholder: 'Ask anythingâ€¦',
         official: 'Official',
         newTop: 'New top score.',
         placed: 'place on this board.',

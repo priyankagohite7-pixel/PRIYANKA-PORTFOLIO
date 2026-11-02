@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type ComponentType, type FormEvent } from 'react';
+﻿import { useCallback, useEffect, useRef, useState, type ComponentType, type FormEvent } from 'react';
 import {
   AtSign, Award, BookOpen, Bot, Briefcase, FileText, Gamepad2, Globe, Home, Image as ImageIcon,
   Layers, ListOrdered, LogOut, MessagesSquare, PanelTop, Search, Settings as SettingsIcon,
@@ -52,7 +52,7 @@ interface TabDefinition {
  * The one registry behind both the sidebar and the rendered panel.
  *
  * Every tab used to be an `if (tab === 'x')` branch sitting beside its sidebar
- * button, which is how a tab ends up with a button and no panel — or a panel and
+ * button, which is how a tab ends up with a button and no panel â€” or a panel and
  * no button. Each tab also lives in its own module, so switching tabs mounts one
  * panel and unmounts the last.
  */
@@ -155,7 +155,7 @@ export default function AdminPanel({ open, onClose, sectionOrder, onSectionOrder
         <div className="flex min-h-0 w-full flex-col">
           <header className="glass-strong flex shrink-0 items-center justify-between gap-3 border-b border-[var(--line)] px-4 py-3 sm:px-6">
             <div className="flex min-w-0 items-center gap-3">
-              <span aria-hidden="true" className="monogram">MP</span>
+              <span aria-hidden="true" className="monogram">PP</span>
               <div className="min-w-0">
                 <p id="admin-panel-title" className="font-display text-[13px] font-bold tracking-tight text-[var(--ink)] sm:text-sm">
                   Admin dashboard
@@ -279,7 +279,7 @@ function LoginForm({
             />
           </div>
           <button type="submit" disabled={busy || password.length === 0} className="btn btn-primary w-full text-[13px]">
-            {busy ? 'Signing in…' : 'Enter dashboard'}
+            {busy ? 'Signing inâ€¦' : 'Enter dashboard'}
           </button>
         </form>
 
@@ -291,7 +291,7 @@ function LoginForm({
           <p className="mt-5 border-t border-[var(--line)] pt-4 text-xs leading-relaxed text-[var(--muted)]">
             {syncStatus === 'offline'
               ? 'The cloud is unreachable, so a password cannot be checked right now.'
-              : 'Checking the cloud session…'}
+              : 'Checking the cloud sessionâ€¦'}
           </p>
         )}
       </div>

@@ -25,3 +25,6 @@ dist-ssr
 
 # Agent Manager worktrees
 .kilo/
+
+# Local dev database
+.local-data.json

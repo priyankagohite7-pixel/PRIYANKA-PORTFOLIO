@@ -298,12 +298,15 @@ function loadData(): PortfolioData {
       };
 
       // One-off rename of the demo identity that shipped in the very first seed.
-      if (data.profile.name === 'Aarav Mehta') data.profile.name = 'MAYANK PAWAR';
-      if (data.profile.email === 'aarav.mehta@example.com' || data.profile.email === 'mayank.pawar@example.com') {
+      if (data.profile.name === 'Aarav Mehta' || data.profile.name === 'MAYANK PAWAR') data.profile.name = 'PRIYANKA PAWAR';
+      if (data.profile.email === 'aarav.mehta@example.com' || data.profile.email === 'mayank.pawar@example.com' || data.profile.email === 'priyanka.pawar@example.com') {
         data.profile.email = '';
       }
+      if (data.profile.bio && data.profile.bio.includes('MAYANK PAWAR')) {
+        data.profile.bio = data.profile.bio.replace(/MAYANK PAWAR/g, 'PRIYANKA PAWAR');
+      }
       data.poems = data.poems.map((poem) => (
-        poem.author === 'Aarav Mehta' ? { ...poem, author: 'MAYANK PAWAR' } : poem
+        poem.author === 'Aarav Mehta' || poem.author === 'MAYANK PAWAR' ? { ...poem, author: 'PRIYANKA PAWAR' } : poem
       ));
       return normalizeData(data);
     }

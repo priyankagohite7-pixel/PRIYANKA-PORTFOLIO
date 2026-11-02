@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Menu, Search, Volume2, VolumeX, X } from 'lucide-react';
+import { Menu, Search, Shield, Volume2, VolumeX, X } from 'lucide-react';
 import { sounds } from '@/lib/sound';
 import { useData } from '@/lib/DataContext';
 import { searchPortfolio, type PortfolioSearchResult } from '@/lib/search';
@@ -18,6 +18,7 @@ interface NavProps {
   /** False when the admin has disallowed sound site-wide; hides the toggle. */
   soundAllowed: boolean;
   onToggleSound: () => void;
+  onOpenAdmin?: () => void;
 }
 
 /**
@@ -28,7 +29,7 @@ interface NavProps {
  * crawlable internal links at all, which is one of the reasons search engines
  * reported "very few links" and could not follow the page structure.
  */
-export default function Navigation({ onNavigate, onSearchSelect, activeSection, soundOn, soundAllowed, onToggleSound }: NavProps) {
+export default function Navigation({ onNavigate, onSearchSelect, activeSection, soundOn, soundAllowed, onToggleSound, onOpenAdmin }: NavProps) {
   const { data, sectionVisibility, sectionOrder } = useData();
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -47,7 +48,7 @@ export default function Navigation({ onNavigate, onSearchSelect, activeSection, 
     return ordered
       .map((id) => ({ id: id as SectionId, label: labels.get(id as PublicSectionId)?.label ?? id }))
       // Visibility alone is not enough. Certificates with no entries, and Play
-      // Break with everything disabled, render nothing — linking to them scrolls
+      // Break with everything disabled, render nothing â€” linking to them scrolls
       // nowhere. Both the nav and the section renderer ask `sectionHasContent`.
       .filter((entry) => !isBlockHidden(sectionVisibility, entry.id))
       .filter((entry) => sectionHasContent(entry.id, data));
@@ -207,7 +208,7 @@ export default function Navigation({ onNavigate, onSearchSelect, activeSection, 
                     setQuery('');
                   }
                 }}
-                placeholder="Search…"
+                placeholder="Searchâ€¦"
                 aria-expanded={resultsOpen && Boolean(query.trim())}
                 aria-controls="site-search-results"
                 className="field h-9 w-full py-1.5 pl-8 pr-8 text-[13px]"
@@ -230,7 +231,7 @@ export default function Navigation({ onNavigate, onSearchSelect, activeSection, 
                 >
                   {results.length === 0 ? (
                     <p className="px-3 py-5 text-center text-[13px] text-[var(--muted)]">
-                      Nothing matches “{query.trim()}”.
+                      Nothing matches â€œ{query.trim()}â€.
                     </p>
                   ) : (
                     results.map((result) => (
@@ -256,6 +257,18 @@ export default function Navigation({ onNavigate, onSearchSelect, activeSection, 
             </div>
 
             <div className="flex flex-none items-center gap-1.5">
+              {onOpenAdmin && (
+                <button
+                  type="button"
+                  onClick={() => { sounds.click(); onOpenAdmin(); }}
+                  title="Admin Dashboard"
+                  aria-label="Admin Dashboard"
+                  className="btn-icon h-9 w-9 min-h-0 text-[var(--accent)] hover:bg-[var(--accent-soft)]"
+                >
+                  <Shield size={15} aria-hidden="true" />
+                  <span className="sr-only">Admin Dashboard</span>
+                </button>
+              )}
               {soundAllowed && (
                 <button
                   type="button"
@@ -333,6 +346,18 @@ export default function Navigation({ onNavigate, onSearchSelect, activeSection, 
                   </a>
                 </li>
               ))}
+              {onOpenAdmin && (
+                <li className="pt-2 border-t border-[var(--line)]">
+                  <button
+                    type="button"
+                    onClick={() => { setDrawerOpen(false); sounds.click(); onOpenAdmin(); }}
+                    className="flex w-full items-center gap-2 rounded-card px-4 py-3 text-sm font-medium text-[var(--accent)] hover:bg-[var(--accent-soft)]"
+                  >
+                    <Shield size={16} aria-hidden="true" />
+                    Admin Panel
+                  </button>
+                </li>
+              )}
             </ul>
           </nav>
         </div>

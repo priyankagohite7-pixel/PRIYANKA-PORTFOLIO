@@ -1,4 +1,4 @@
-# MAYANK PAWAR — Personal Platform
+# PRIYANKA PAWAR — Personal Platform
 
 A cloud-synced personal site that works as both a **recruiter-facing portfolio** and a **reading room for published writing**. Built with React 18, TypeScript, Vite and Tailwind, backed by a serverless JSONBin proxy. Every section is editable from an in-page admin dashboard — no rebuild required.
 
@@ -204,4 +204,4 @@ Correctness claims in this repo are tested, not asserted:
 
 ## Credits
 
-Written and built by [MAYANK PAWAR](https://github.com/MAYANKPAWAR24).
+Written and built by [PRIYANKA PAWAR](https://github.com/MAYANKPAWAR24).

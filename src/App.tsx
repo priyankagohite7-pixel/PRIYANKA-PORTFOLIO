@@ -39,7 +39,31 @@ function AppContent() {
     updateSectionOrder, addGuestbookEntry,
   } = useData();
 
-  const [adminOpen, setAdminOpen] = useState(false);
+  const [adminOpen, setAdminOpen] = useState(() => {
+    return typeof window !== 'undefined' && window.location.hash === '#admin';
+  });
+
+  useEffect(() => {
+    const handleHash = () => {
+      if (window.location.hash === '#admin') {
+        setAdminOpen(true);
+      }
+    };
+    window.addEventListener('hashchange', handleHash);
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'a' || e.key === 'A')) {
+        e.preventDefault();
+        setAdminOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHash);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
   // The persisted preference is read during the first render so the nav toggle
   // never flashes the wrong state on load.
   const [soundOn, setSoundOn] = useState(() => initSoundPreference());
@@ -151,8 +175,8 @@ function AppContent() {
 
   /* ---- Document head ------------------------------------------------
    * The static <head> in index.html is a fallback. Everything an admin
-   * controls — title, description, canonical, Open Graph, JSON-LD and
-   * the noindex opt-out — is applied here so it stays in sync with the
+   * controls â€” title, description, canonical, Open Graph, JSON-LD and
+   * the noindex opt-out â€” is applied here so it stays in sync with the
    * record rather than drifting from it.                          */
   useEffect(() => {
     applyHead(data.seoSettings as SeoSettings, {
@@ -256,6 +280,7 @@ function AppContent() {
         soundOn={soundOn}
         soundAllowed={data.soundSettings.allowed}
         onToggleSound={toggleSound}
+        onOpenAdmin={() => setAdminOpen(true)}
       />
 
       {/* NOTE: no transform / `will-change` on <main>. It would become the

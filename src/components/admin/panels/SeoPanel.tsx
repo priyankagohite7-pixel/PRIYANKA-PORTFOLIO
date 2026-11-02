@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { TriangleAlert } from 'lucide-react';
 import {
   AdminHeader, Field, SectionCard, TagEditor, Toggle,
@@ -96,13 +96,13 @@ export default function SeoPanel() {
               value={draft.ogImage}
               onChange={(value) => patch('ogImage', value)}
               placeholder="/og-image.png"
-              hint="Shown when the site is shared. 1200×630 works everywhere."
+              hint="Shown when the site is shared. 1200Ã—630 works everywhere."
             />
             <Field
               label="X / Twitter handle"
               value={draft.twitterHandle}
               onChange={(value) => patch('twitterHandle', value)}
-              placeholder="mayankpawar"
+              placeholder="priyankapawar"
               hint="Stored without the leading @."
             />
           </div>

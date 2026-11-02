@@ -1,4 +1,4 @@
-import type { ChatbotFAQ, ChatbotLanguage, ChatbotTone, SectionId } from './types';
+﻿import type { ChatbotFAQ, ChatbotLanguage, ChatbotTone, SectionId } from './types';
 import { fallbackFor, flavourAnswer, multiTurnFor, welcomeFor } from './chatbotVoice';
 
 /**
@@ -11,7 +11,7 @@ import { fallbackFor, flavourAnswer, multiTurnFor, welcomeFor } from './chatbotV
  *     costs nothing to run. This is a deliberate property, not a limitation.
  *  2. An absent admin FAQ set must fall back to the embedded dataset rather
  *     than leaving the bot unable to answer anything.
- *  3. Replies may carry *actions* — a section to jump to — which is what turns
+ *  3. Replies may carry *actions* â€” a section to jump to â€” which is what turns
  *     the widget from a FAQ reader into a site guide.
  *
  * The previous dataset was a novelty persona: it answered questions about black
@@ -69,18 +69,18 @@ export interface ChatbotReply {
 
 export const CHATBOT_NAME = 'Site Assistant';
 
-export const TYPING_LABEL = 'Looking that up…';
+export const TYPING_LABEL = 'Looking that upâ€¦';
 
 export const CHATBOT_OPENING_LINE =
-  "Hi — I'm the assistant for this site. Ask me about Mayank's work, writing, skills, or how to get in touch.";
+  "Hi â€” I'm the assistant for this site. Ask me about Priyanka's work, writing, skills, or how to get in touch.";
 
 export const HELP_FALLBACKS = [
-  "I don't have an answer for that one yet. Try asking who Mayank is, what he builds, or how to get in touch — or use the buttons below.",
+  "I don't have an answer for that one yet. Try asking who Priyanka is, what he builds, or how to get in touch â€” or use the buttons below.",
   "That's outside what I know. I'm best with questions about the portfolio, the writing, skills and contact details.",
   "Not sure I can help with that. Ask about the work, the writing, or where to find contact details.",
 ];
 
-export const MINIMAL_FALLBACK = "I don't have an answer for that. Try asking about the portfolio, the writing, or how to contact Mayank.";
+export const MINIMAL_FALLBACK = "I don't have an answer for that. Try asking about the portfolio, the writing, or how to contact Priyanka.";
 
 /**
  * The permanent dataset.
@@ -92,34 +92,34 @@ export const MINIMAL_FALLBACK = "I don't have an answer for that. Try asking abo
  */
 export const DEFAULT_CHATBOT_FAQS: EmbeddedFAQ[] = [
   {
-    keywords: ['who is mayank', 'who are you', 'about mayank', 'about you', 'introduce', 'who is this', 'tell me about'],
+    keywords: ['who is priyanka', 'who are you', 'about priyanka', 'about you', 'introduce', 'who is this', 'tell me about'],
     synonyms: ['who r u', 'your name', 'bio', 'about the author', 'who owns this site'],
     hinglish:
-      'Mayank Pawar — writer aur developer, dono. Matlab ek taraf se poetry aur novels, doosri taraf se front-end aur product engineering. Kaam literature aur technology ke beech se nikalta hai. Poora background About section mein hai.',
+      'Priyanka Pawar â€” writer aur developer, dono. Matlab ek taraf se poetry aur novels, doosri taraf se front-end aur product engineering. Kaam literature aur technology ke beech se nikalta hai. Poora background About section mein hai.',
     category: 'general',
     section: 'profile',
     response:
-      "Mayank Pawar is a writer and software developer who works where literature meets technology — poetry and long-form fiction on one side, front-end and product engineering on the other. The About section has the full background.",
+      "Priyanka Pawar is a writer and software developer who works where literature meets technology â€” poetry and long-form fiction on one side, front-end and product engineering on the other. The About section has the full background.",
   },
   {
     keywords: ['portfolio', 'my work', 'show me the work', 'projects', 'what has he built', 'case study'],
     synonyms: ['your work', 'showcase', 'builds', 'made', 'portfolio work', 'examples'],
     hinglish:
-      'Portfolio wahi section hai jo pehle padhna chahiye. Usme professional summary hai, kya kya build karta hai, aur case studies — is website ki bhi, jo React aur TypeScript se bani hai, poori admin CMS ke saath, cloud sync, knowledge-base chatbot aur aath games.',
+      'Portfolio wahi section hai jo pehle padhna chahiye. Usme professional summary hai, kya kya build karta hai, aur case studies â€” is website ki bhi, jo React aur TypeScript se bani hai, poori admin CMS ke saath, cloud sync, knowledge-base chatbot aur aath games.',
     category: 'work',
     section: 'portfolio',
     response:
-      'The Portfolio section is the one to read first. It covers a professional summary, what he builds, and case studies — including this site, which is a React and TypeScript single-page app with a full admin CMS, cloud content sync, a knowledge-base chatbot and six mini-games.',
+      'The Portfolio section is the one to read first. It covers a professional summary, what he builds, and case studies â€” including this site, which is a React and TypeScript single-page app with a full admin CMS, cloud content sync, a knowledge-base chatbot and six mini-games.',
   },
   {
     keywords: ['skills', 'tech stack', 'what can he do', 'languages', 'tools', 'expertise', 'stack'],
     synonyms: ['what does he know', 'technologies', 'framework', 'languages he knows', 'skillset'],
     hinglish:
-      'Skills ek flat list mein nahi, groups mein hain — Creative, Technical, Workflow aur Tools, aur Communication. Isliye poora range ek nazar mein dikhta hai.',
+      'Skills ek flat list mein nahi, groups mein hain â€” Creative, Technical, Workflow aur Tools, aur Communication. Isliye poora range ek nazar mein dikhta hai.',
     category: 'recruiter',
     section: 'profile',
     response:
-      'Skills are grouped into Creative, Technical, Workflow and Tools, and Communication on the About section — so you can see the whole range rather than one flat list.',
+      'Skills are grouped into Creative, Technical, Workflow and Tools, and Communication on the About section â€” so you can see the whole range rather than one flat list.',
   },
   {
     keywords: ['where can i read', 'literature', 'poems', 'writing', 'novel', 'books', 'read'],
@@ -175,16 +175,16 @@ export const DEFAULT_CHATBOT_FAQS: EmbeddedFAQ[] = [
     keywords: ['what is this site', 'what can i explore', 'how is this built', 'what is this website'],
     synonyms: ['what is this', 'sections', 'how does this work', 'tell me about the site', 'how was this made'],
     hinglish:
-      'Yeh ek personal platform hai jo portfolio bhi hai aur reading room bhi. Har section — hero, about, portfolio, literature, media, resources, achievements, certificates, contact, community — admin panel se edit hota hai aur cloud pe sync hota hai, saath local copy bhi hai taaki network na ho tab bhi kuch na kho.',
+      'Yeh ek personal platform hai jo portfolio bhi hai aur reading room bhi. Har section â€” hero, about, portfolio, literature, media, resources, achievements, certificates, contact, community â€” admin panel se edit hota hai aur cloud pe sync hota hai, saath local copy bhi hai taaki network na ho tab bhi kuch na kho.',
     category: 'general',
     response:
-      "This is a personal platform that works as both a portfolio and a reading room. Every section — hero, about, portfolio, literature, media, resources, achievements, certificates, contact and community — is edited from an admin panel and synced to the cloud, with a local copy as a fallback so nothing is lost when the network is unavailable.",
+      "This is a personal platform that works as both a portfolio and a reading room. Every section â€” hero, about, portfolio, literature, media, resources, achievements, certificates, contact and community â€” is edited from an admin panel and synced to the cloud, with a local copy as a fallback so nothing is lost when the network is unavailable.",
   },
   {
     keywords: ['games', 'play', 'mini games', 'interactive', 'games section'],
     synonyms: ['play break', 'snake', 'tic tac toe', '2048', 'bored', 'have fun'],
     hinglish:
-      'Play Break section hai jismein aath self-contained games hain — Tic-Tac-Toe jo real minimax AI se khelta hai 3x3 ya 4x4 board pe, Snake, 2048, Memory Match, Math Sprint aur reaction-time test.',
+      'Play Break section hai jismein aath self-contained games hain â€” Tic-Tac-Toe jo real minimax AI se khelta hai 3x3 ya 4x4 board pe, Snake, 2048, Memory Match, Math Sprint aur reaction-time test.',
     category: 'general',
     section: 'games',
     response:
@@ -194,7 +194,7 @@ export const DEFAULT_CHATBOT_FAQS: EmbeddedFAQ[] = [
     keywords: ['notes', 'resources', 'study material', 'downloads', 'guides', 'cheatsheet'],
     synonyms: ['study', 'learning material', 'pdf', 'documents', 'reference'],
     hinglish:
-      'Study Material ek chhoti library hai — guides, references aur workshop notes, tag ke hisaab se group kiye hue. Jin files ka wait kar rahe hain unpe saaf-saaf likha hota hai.',
+      'Study Material ek chhoti library hai â€” guides, references aur workshop notes, tag ke hisaab se group kiye hue. Jin files ka wait kar rahe hain unpe saaf-saaf likha hota hai.',
     category: 'general',
     section: 'study',
     response:
@@ -204,9 +204,9 @@ export const DEFAULT_CHATBOT_FAQS: EmbeddedFAQ[] = [
     keywords: ['hello', 'hi', 'hey', 'good morning', 'good evening', 'good afternoon'],
     synonyms: ['yo', 'sup', 'howdy', 'hiya'],
     hinglish:
-      'Hello. Poochho portfolio, writing, skills ya contact ke baare mein — ya neeche se koi bhi suggestion chun lo.',
+      'Hello. Poochho portfolio, writing, skills ya contact ke baare mein â€” ya neeche se koi bhi suggestion chun lo.',
     category: 'general',
-    response: "Hello. Ask me about the portfolio, the writing, skills, or how to get in touch — or pick one of the suggestions below.",
+    response: "Hello. Ask me about the portfolio, the writing, skills, or how to get in touch â€” or pick one of the suggestions below.",
   },
   {
     keywords: ['thanks', 'thank you', 'cheers', 'helpful', 'nice'],
@@ -221,7 +221,7 @@ export const DEFAULT_CHATBOT_FAQS: EmbeddedFAQ[] = [
 export const QUICK_REPLIES = [
   { id: 'qr-portfolio', label: 'View portfolio', query: 'Show me the portfolio' },
   { id: 'qr-writing', label: 'Read the writing', query: 'Where can I read the writing' },
-  { id: 'qr-contact', label: 'How to contact', query: 'How can I contact Mayank' },
+  { id: 'qr-contact', label: 'How to contact', query: 'How can I contact Priyanka' },
   { id: 'qr-skills', label: 'Skills & tools', query: 'What are his skills' },
 ];
 
@@ -241,7 +241,7 @@ function responseOf(faq: EngineFAQ): string {
  *
  * Only the embedded dataset carries a Hinglish variant. An admin-authored FAQ
  * stays in whatever language the admin wrote it, because silently translating
- * somebody's own words would misrepresent it — so the English answer is used
+ * somebody's own words would misrepresent it â€” so the English answer is used
  * and the flavour layer does the framing instead.
  */
 function responseFor(faq: EngineFAQ, language: ChatbotLanguage): string {
@@ -272,7 +272,7 @@ function synonymsOf(faq: EngineFAQ): string[] {
  *
  * Short keywords must land on a word boundary. Without this, "hi" matches
  * inside "philosophy", "highlight" and "architecture", and "sup" matches inside
- * "support" — which is how the previous engine answered nonsense questions.
+ * "support" â€” which is how the previous engine answered nonsense questions.
  */
 function hasKeyword(query: string, keyword: string): boolean {
   if (keyword.length <= 3) {

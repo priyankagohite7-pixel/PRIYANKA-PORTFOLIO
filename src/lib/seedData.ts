@@ -1,4 +1,4 @@
-import type { PortfolioData } from './types';
+﻿import type { PortfolioData } from './types';
 
 /**
  * Defaults for a first visit with no local record and no reachable cloud.
@@ -18,10 +18,10 @@ import type { PortfolioData } from './types';
 export const seedData: PortfolioData = {
   visitorCount: 0,
   profile: {
-    name: 'MAYANK PAWAR',
-    title: 'Writer · Developer · Creator',
+    name: 'PRIYANKA PAWAR',
+    title: 'Writer Â· Developer Â· Creator',
     tagline: 'Crafting words into worlds, code into art.',
-    bio: "I'm MAYANK PAWAR, a writer and software developer who finds beauty at the intersection of literature and technology. My journey spans from penning heartfelt poetry to building elegant digital experiences. I believe every line of code and every verse of poetry shares the same goal: to move people.",
+    bio: "I'm PRIYANKA PAWAR, a writer and software developer who finds beauty at the intersection of literature and technology. My journey spans from penning heartfelt poetry to building elegant digital experiences. I believe every line of code and every verse of poetry shares the same goal: to move people.",
     photo: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600',
     email: '',
     location: 'Bengaluru, India',
@@ -39,15 +39,15 @@ export const seedData: PortfolioData = {
       // Every platform in SOCIAL_PLATFORMS ships as an entry so it can be
       // switched on from Admin -> Site without any code change. The visible
       // ones are the ones actually used; the rest are staged and hidden.
-      { id: 'instagram', label: 'Instagram', url: 'https://instagram.com/mayankpawar', icon: 'Instagram', visible: true },
-      { id: 'linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/mayankpawar', icon: 'Linkedin', visible: true },
-      { id: 'github', label: 'GitHub', url: 'https://github.com/mayankpawar', icon: 'Github', visible: true },
-      { id: 'twitter', label: 'X / Twitter', url: 'https://x.com/mayankpawar', icon: 'Twitter', visible: true },
-      { id: 'youtube', label: 'YouTube', url: 'https://youtube.com/@mayankpawar', icon: 'Youtube', visible: true },
-      { id: 'threads', label: 'Threads', url: 'https://threads.net/@mayankpawar', icon: 'AtSign', visible: true },
-      { id: 'telegram', label: 'Telegram', url: 'https://t.me/mayankpawar', icon: 'Send', visible: true },
+      { id: 'instagram', label: 'Instagram', url: 'https://instagram.com/priyankapawar', icon: 'Instagram', visible: true },
+      { id: 'linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/priyankapawar', icon: 'Linkedin', visible: true },
+      { id: 'github', label: 'GitHub', url: 'https://github.com/priyankapawar', icon: 'Github', visible: true },
+      { id: 'twitter', label: 'X / Twitter', url: 'https://x.com/priyankapawar', icon: 'Twitter', visible: true },
+      { id: 'youtube', label: 'YouTube', url: 'https://youtube.com/@priyankapawar', icon: 'Youtube', visible: true },
+      { id: 'threads', label: 'Threads', url: 'https://threads.net/@priyankapawar', icon: 'AtSign', visible: true },
+      { id: 'telegram', label: 'Telegram', url: 'https://t.me/priyankapawar', icon: 'Send', visible: true },
 
-      { id: 'facebook', label: 'Facebook', url: 'https://facebook.com/mayankpawar', icon: 'Facebook', visible: false },
+      { id: 'facebook', label: 'Facebook', url: 'https://facebook.com/priyankapawar', icon: 'Facebook', visible: false },
       { id: 'snapchat', label: 'Snapchat', url: '', icon: '', visible: false },
       { id: 'pinterest', label: 'Pinterest', url: '', icon: '', visible: false },
       { id: 'tiktok', label: 'TikTok', url: '', icon: '', visible: false },
@@ -76,7 +76,7 @@ export const seedData: PortfolioData = {
   },
   poems: [
     {
-      id: 'p1', type: 'poem', title: 'Whispers of Dawn', author: 'MAYANK PAWAR',
+      id: 'p1', type: 'poem', title: 'Whispers of Dawn', author: 'PRIYANKA PAWAR',
       category: 'Nature', date: '2025-08-15',
       coverGradient: 'from-cyan-500 to-blue-600',
       excerpt: 'The morning light speaks in silent syllables...',
@@ -84,7 +84,7 @@ export const seedData: PortfolioData = {
 
 The morning light speaks in silent syllables,
 painting the sky in hues of quiet fire.
-Each ray a verse, each shadow a stanza —
+Each ray a verse, each shadow a stanza â€”
 the world awakens, reading itself aloud.
 
 Birds carry melodies like punctuation,
@@ -95,10 +95,10 @@ reflecting a sun that has only just begun to speak.
 I stand at the edge of this opening page,
 waiting for the day to write its first word upon me.
 And somewhere between breath and belief,
-I find my own dawn — whispering back.`,
+I find my own dawn â€” whispering back.`,
     },
     {
-      id: 'p2', type: 'poem', title: 'Paper Boats', author: 'MAYANK PAWAR',
+      id: 'p2', type: 'poem', title: 'Paper Boats', author: 'PRIYANKA PAWAR',
       category: 'Nostalgia', date: '2025-06-20',
       coverGradient: 'from-rose-400 to-purple-500',
       excerpt: 'We folded our dreams into paper boats...',
@@ -109,7 +109,7 @@ and set them sailing on monsoon streets.
 Some sank beneath the weight of rain,
 some reached places we never could.
 
-I still see them — those little vessels of hope —
+I still see them â€” those little vessels of hope â€”
 bobbing past streetlights and forgotten alleys,
 carrying the handwriting of children
 who believed the water would know the way.
@@ -117,10 +117,10 @@ who believed the water would know the way.
 Now I am older, and the streets are drier.
 But sometimes, when it pours,
 I fold a quiet wish into a corner of my mind
-and let it drift — just in case the rain still remembers.`,
+and let it drift â€” just in case the rain still remembers.`,
     },
     {
-      id: 'p3', type: 'poem', title: 'The Code Between Us', author: 'MAYANK PAWAR',
+      id: 'p3', type: 'poem', title: 'The Code Between Us', author: 'PRIYANKA PAWAR',
       category: 'Technology', date: '2025-09-01',
       coverGradient: 'from-teal-400 to-cyan-600',
       excerpt: 'In the space between semicolons and sighs...',
@@ -129,7 +129,7 @@ and let it drift — just in case the rain still remembers.`,
 In the space between semicolons and sighs,
 we built a language only we could read.
 Functions named after inside jokes,
-variables holding more than data —
+variables holding more than data â€”
 they held the shape of your laughter.
 
 We debugged each other's silence,
@@ -140,22 +140,22 @@ but the feeling of being understood.
 Now the repository sits frozen.
 No new commits. No pull requests.
 But somewhere in the version history,
-our code still runs —
+our code still runs â€”
 quietly, perfectly, in the background of who I am.`,
     },
     {
-      id: 'n1', type: 'novel', title: 'The Last Bookshop', author: 'MAYANK PAWAR',
+      id: 'n1', type: 'novel', title: 'The Last Bookshop', author: 'PRIYANKA PAWAR',
       category: 'Literary Fiction', date: '2025-03-10',
       coverGradient: 'from-amber-400 to-orange-600',
       excerpt: 'In a world that had forgotten how to read, one shop still remembered...',
       content: `The Last Bookshop
 Chapter One: The Door That Knew Your Name
 
-There was a bookshop at the end of Marigold Lane that didn't appear on any map. You couldn't find it by searching — it found you. The door was painted the color of old stories, deep burgundy with a brass handle shaped like a sleeping cat.
+There was a bookshop at the end of Marigold Lane that didn't appear on any map. You couldn't find it by searching â€” it found you. The door was painted the color of old stories, deep burgundy with a brass handle shaped like a sleeping cat.
 
-Mira first walked through it on a Tuesday she hadn't planned for. It had been raining in that indecisive way that makes you neither stay nor go. She ducked under the green awning, more to escape the drizzle than from any intention to enter. But the door swung open on its own — gently, as if it had been expecting her.
+Mira first walked through it on a Tuesday she hadn't planned for. It had been raining in that indecisive way that makes you neither stay nor go. She ducked under the green awning, more to escape the drizzle than from any intention to enter. But the door swung open on its own â€” gently, as if it had been expecting her.
 
-Inside, the air smelled of paper and patience. Shelves rose to the ceiling like promises, each book spine a different shade of meaning. A cat — the same one as the door handle, she was sure — sat on the counter, watching her with the calm authority of someone who had seen everything and found most of it acceptable.
+Inside, the air smelled of paper and patience. Shelves rose to the ceiling like promises, each book spine a different shade of meaning. A cat â€” the same one as the door handle, she was sure â€” sat on the counter, watching her with the calm authority of someone who had seen everything and found most of it acceptable.
 
 "Welcome back," said the cat.
 
@@ -164,20 +164,20 @@ Mira blinked. "I've never been here before."
 The cat's tail flicked. "That's what they all say. I've seen it a thousand times. The books remember you, even if you don't remember them."`,
     },
     {
-      id: 'n2', type: 'novel', title: 'Pixels of Memory', author: 'MAYANK PAWAR',
+      id: 'n2', type: 'novel', title: 'Pixels of Memory', author: 'PRIYANKA PAWAR',
       category: 'Sci-Fi', date: '2025-05-22',
       coverGradient: 'from-indigo-400 to-violet-600',
       excerpt: 'When memories became downloadable, forgetting became a luxury...',
       content: `Pixels of Memory
 Chapter One: The Archive of Good Days
 
-In 2047, memories became the most traded commodity on the planet. You could buy a stranger's perfect summer afternoon for twelve credits. You could sell your grandmother's laugh — if you were the sort of person who would.
+In 2047, memories became the most traded commodity on the planet. You could buy a stranger's perfect summer afternoon for twelve credits. You could sell your grandmother's laugh â€” if you were the sort of person who would.
 
 Kai worked at a memory archive, the kind of place people visited the way they used to visit libraries. His job was to sort incoming memories, tag them, and file them in the great cloud of human experience.
 
-"Today, someone walked in carrying a jar — the vessels they used now — and set it on the counter with the careful weight of surrender. 'I don't want this one anymore,' they'd say."
+"Today, someone walked in carrying a jar â€” the vessels they used now â€” and set it on the counter with the careful weight of surrender. 'I don't want this one anymore,' they'd say."
 
-Until the day a woman came in with a jar that glowed a color he had never seen before — not in any archive, not in any catalog. It was the color of something he had forgotten.`,
+Until the day a woman came in with a jar that glowed a color he had never seen before â€” not in any archive, not in any catalog. It was the color of something he had forgotten.`,
     },
   ],
   media: [
@@ -202,12 +202,12 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
       url: 'https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=1600',
     },
     {
-      id: 'v1', type: 'video', title: 'Creative Process — Behind the Scenes', category: 'Vlog', date: '2025-09-12',
+      id: 'v1', type: 'video', title: 'Creative Process â€” Behind the Scenes', category: 'Vlog', date: '2025-09-12',
       thumbnail: 'https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg',
       url: 'https://www.youtube.com/embed/ScMzIvxBSi4',
     },
     {
-      id: 'v2', type: 'video', title: 'Poetry Reading — Live', category: 'Spoken Word', date: '2025-08-30',
+      id: 'v2', type: 'video', title: 'Poetry Reading â€” Live', category: 'Spoken Word', date: '2025-08-30',
       thumbnail: 'https://img.youtube.com/vi/6E5h1G5qVW8/hqdefault.jpg',
       url: 'https://www.youtube.com/embed/6E5h1G5qVW8',
     },
@@ -240,22 +240,22 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
   ],
   achievements: [
     {
-      id: 'a1', title: 'National Poetry Award — 1st Place',
+      id: 'a1', title: 'National Poetry Award â€” 1st Place',
       description: 'Won first place among 2,400+ entries for the poem "Whispers of Dawn" at the National Literary Council.',
       date: '2025-08-20', category: 'Writing', icon: 'Award',
     },
     {
-      id: 'a2', title: 'Published Author — Debut Novel',
+      id: 'a2', title: 'Published Author â€” Debut Novel',
       description: 'Successfully published "The Last Bookshop" with a leading indie publisher. Reached #3 on the literary fiction chart.',
       date: '2025-03-15', category: 'Publishing', icon: 'BookOpen',
     },
     {
-      id: 'a3', title: 'Speaker — Tech & Story Conference',
+      id: 'a3', title: 'Speaker â€” Tech & Story Conference',
       description: 'Delivered a keynote on "The Intersection of Code and Creativity" to an audience of 800+ developers and writers.',
       date: '2025-01-28', category: 'Speaking', icon: 'Mic',
     },
     {
-      id: 'a4', title: 'Hackathon Winner — Best UX',
+      id: 'a4', title: 'Hackathon Winner â€” Best UX',
       description: 'Led a team of 4 to victory in a 48-hour hackathon, building a reading app for visually impaired users.',
       date: '2024-11-12', category: 'Technology', icon: 'Trophy',
     },
@@ -295,7 +295,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
 
   heroSettings: {
     showGreeting: true,
-    intro: 'Writer and software developer working where literature meets technology. This site is both my portfolio and my reading room — professional work on one side, published writing on the other.',
+    intro: 'Writer and software developer working where literature meets technology. This site is both my portfolio and my reading room â€” professional work on one side, published writing on the other.',
     ctas: [
       { id: 'cta-primary', label: 'View My Work', target: 'portfolio' },
       { id: 'cta-secondary', label: 'Read My Writing', target: 'literature' },
@@ -360,7 +360,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
 
   contactSettings: {
     heading: 'Get in Touch',
-    intro: 'For commissions, collaborations, or a conversation about the work — the fastest route is email.',
+    intro: 'For commissions, collaborations, or a conversation about the work â€” the fastest route is email.',
     email: '',
     phone: '',
     showForm: true,
@@ -370,7 +370,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
 
   footerSettings: {
     note: 'Built as a living portfolio: every section on this page is editable from the admin panel and syncs to the cloud.',
-    copyright: `© ${new Date().getFullYear()} MAYANK PAWAR. All rights reserved.`,
+    copyright: `Â© ${new Date().getFullYear()} PRIYANKA PAWAR. All rights reserved.`,
     columns: [
       {
         id: 'col-explore',
@@ -396,12 +396,12 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
   },
 
   seoSettings: {
-    title: 'MAYANK PAWAR — Writer, Developer & Creator',
-    description: 'Portfolio and published writing by MAYANK PAWAR — a writer and front-end developer working across literature and technology.',
+    title: 'PRIYANKA PAWAR â€” Writer, Developer & Creator',
+    description: 'Portfolio and published writing by PRIYANKA PAWAR â€” a writer and front-end developer working across literature and technology.',
     ogImage: '/og-image.png',
     siteUrl: '',
     keywords: [
-      'MAYANK PAWAR',
+      'PRIYANKA PAWAR',
       'writer portfolio',
       'poetry',
       'literary fiction',
@@ -434,7 +434,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
 
   /**
    * Sound is *allowed* by default but a visitor still opts in before hearing
-   * anything — see `initSoundPreference`. Only games get a slightly richer
+   * anything â€” see `initSoundPreference`. Only games get a slightly richer
    * palette; interface audio stays quiet and neutral.
    */
   soundSettings: {
@@ -451,7 +451,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
     namePlaceholder: 'Your name',
     showLocal: true,
     // `global` means one shared board every visitor sees. It needs a separate
-    // JSONBin bin — see `JSONBIN_SCORE_BIN_ID` in the setup notes.
+    // JSONBin bin â€” see `JSONBIN_SCORE_BIN_ID` in the setup notes.
     mode: 'global',
     // Guards the shared board against a broken game loop or a spam run.
     minimumScore: 1,
@@ -474,7 +474,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
       level: 'Senior Secondary',
       board: 'CBSE',
       field: 'Science (Physics, Chemistry, Mathematics)',
-      period: '2019 – 2021',
+      period: '2019 â€“ 2021',
       location: 'Bengaluru, India',
       score: '92.4%',
       scoreLabel: 'CBSE Averages',
@@ -488,7 +488,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
       level: 'Bachelor of Technology',
       board: 'University',
       field: 'Computer Science & Engineering',
-      period: '2021 – 2025',
+      period: '2021 â€“ 2025',
       location: 'Bengaluru, India',
       score: '8.74 / 10',
       scoreLabel: 'CGPA',
@@ -504,7 +504,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
       role: 'Freelance Front-End Developer',
       organisation: 'Independent',
       type: 'freelance',
-      period: '2024 – Present',
+      period: '2024 â€“ Present',
       location: 'Remote',
       summary: 'Build and maintain content platforms for writers and small studios, from data model through to the last interaction.',
       highlights: [
@@ -535,7 +535,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
       role: 'Open Source Contributor',
       organisation: 'Various',
       type: 'volunteer',
-      period: '2023 – Present',
+      period: '2023 â€“ Present',
       location: 'Remote',
       summary: 'Documentation, accessibility fixes and small bug reports.',
       highlights: ['Improved screen-reader semantics on two community tools.'],
@@ -545,17 +545,17 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
   ],
 
   /**
-   * Languages. Written in their own scripts deliberately — the Devanagari,
+   * Languages. Written in their own scripts deliberately â€” the Devanagari,
    * Tamil and Arabic entries must survive storage, normalising and rendering
    * unchanged. Nothing here is transliterated or escaped.
    */
   languages: [
     { id: 'lang-1', name: 'English', proficiency: 'native', note: 'Writing and editing', visible: true, order: 0 },
-    { id: 'lang-2', name: 'हिन्दी', proficiency: 'fluent', note: 'Native language', visible: true, order: 1 },
-    { id: 'lang-3', name: 'मराठी', proficiency: 'fluent', note: 'Home language', visible: true, order: 2 },
-    { id: 'lang-4', name: 'தமிழ்', proficiency: 'intermediate', note: 'Reading and conversation', visible: true, order: 3 },
-    { id: 'lang-5', name: 'العربية', proficiency: 'basic', note: 'Reading', visible: true, order: 4 },
-    { id: 'lang-6', name: 'Español', proficiency: 'basic', note: 'Beginning', visible: true, order: 5 },
+    { id: 'lang-2', name: 'à¤¹à¤¿à¤¨à¥à¤¦à¥€', proficiency: 'fluent', note: 'Native language', visible: true, order: 1 },
+    { id: 'lang-3', name: 'à¤®à¤°à¤¾à¤ à¥€', proficiency: 'fluent', note: 'Home language', visible: true, order: 2 },
+    { id: 'lang-4', name: 'à®¤à®®à®¿à®´à¯', proficiency: 'intermediate', note: 'Reading and conversation', visible: true, order: 3 },
+    { id: 'lang-5', name: 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©', proficiency: 'basic', note: 'Reading', visible: true, order: 4 },
+    { id: 'lang-6', name: 'EspaÃ±ol', proficiency: 'basic', note: 'Beginning', visible: true, order: 5 },
   ],
 
   resumeSettings: {
@@ -580,8 +580,8 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
   chatbotSettings: {
     enabled: true,
     name: 'Site Assistant',
-    greeting: "Hi — I'm the assistant for this site. Ask me about Mayank's work, writing, skills, or how to get in touch.",
-    greetingHinglish: "Hey, main hoon is site ka assistant. Poochho — kaam, likhne ka skill, ya contact. Jo bhi chahiye, bata do.",
+    greeting: "Hi â€” I'm the assistant for this site. Ask me about Priyanka's work, writing, skills, or how to get in touch.",
+    greetingHinglish: "Hey, main hoon is site ka assistant. Poochho â€” kaam, likhne ka skill, ya contact. Jo bhi chahiye, bata do.",
     // `warm` is the default: confident and genuinely glad you asked, without
     // the corporate register the old replies had.
     tone: 'warm',
@@ -591,7 +591,7 @@ Until the day a woman came in with a jar that glowed a color he had never seen b
     quickReplies: [
       { id: 'qr-portfolio', label: 'View portfolio', query: 'Take me to the portfolio' },
       { id: 'qr-writing', label: 'Read the writing', query: 'Where can I read the writing' },
-      { id: 'qr-contact', label: 'How to contact', query: 'How can I contact Mayank' },
+      { id: 'qr-contact', label: 'How to contact', query: 'How can I contact Priyanka' },
       { id: 'qr-skills', label: 'Skills & tools', query: 'What are his skills' },
     ],
     sectionChips: [
